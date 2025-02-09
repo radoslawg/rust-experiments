@@ -11,7 +11,9 @@ pub fn run() {
         Some(s) => s,
         None => "Error"
     });
-    println!("Should print some => {}", option_pattern("o").and_then(option_pattern).unwrap()); // monad's bind progression
+    println!("Should print some => {}", Some("o").and_then(option_pattern).and_then(option_pattern).unwrap()); // monad's bind progression
+    println!("Should print true => {}", Some("os").and_then(option_pattern).and_then(option_pattern).is_none()); // monad's bind progression
+
 }
 
 fn option_pattern(o: &str) -> Option<&str> {

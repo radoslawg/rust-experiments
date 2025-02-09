@@ -11,12 +11,14 @@ pub fn run() {
         Some(s) => s,
         None => "Error"
     });
+    println!("Should print some => {}", option_pattern("o").and_then(option_pattern).unwrap()); // monad's bind progression
 }
 
 fn option_pattern(o: &str) -> Option<&str> {
     match o {
         "option1" => Some("some"),
         "option2" => Some("something else"),
+        "o" => Some("option1"),
         _ => None
     }
 }

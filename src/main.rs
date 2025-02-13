@@ -1,3 +1,4 @@
+mod enums;
 mod funwithmodules;
 mod httprequest;
 mod option;
@@ -14,4 +15,5 @@ fn main() {
     funwithmodules::outer_module::inner_module::print_message();
     option::run();
     httprequest::run();
+    enums::run();
 }

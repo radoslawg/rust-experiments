@@ -1,7 +1,7 @@
 use futures::executor;
 use reqwest;
 
-async fn shorter() {
+pub async fn shorter() {
     let response_text = reqwest::get("")
         .await
         .expect("Error calling page") // this will panic
@@ -12,7 +12,7 @@ async fn shorter() {
 }
 pub fn run() {
     let vals = async {
-        shorter().await;
+        //shorter().await;
         match reqwest::get("").await {
             Ok(response) => {
                 if response.status() == reqwest::StatusCode::OK {

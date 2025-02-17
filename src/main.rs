@@ -5,6 +5,7 @@ mod option;
 mod random;
 mod regex;
 mod strings;
+mod external_programs;
 
 fn main() {
     println!("Hello, world!");
@@ -16,4 +17,5 @@ fn main() {
     option::run();
     httprequest::run();
     enums::run();
+    external_programs::run();
 }

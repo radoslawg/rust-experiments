@@ -1,11 +1,14 @@
 mod enums;
+mod external_programs;
+mod for_tests;
 mod funwithmodules;
 mod httprequest;
 mod option;
 mod random;
 mod regex;
 mod strings;
-mod external_programs;
+#[cfg(test)]
+mod tests;
 
 fn main() {
     println!("Hello, world!");
